@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/normalize/8.0.1/normalize.min.css"
+    />
+    <title>珠峰课堂</title>
+  </head>
+  <body>
+    <script>
+      //   let docEle = document.documentElement;
+      //   function setRemUnit() {
+      //     docEle.style.fontSize = (docEle.clientWidth / 750) * 100 + "px";
+      //   }
+      //   setRemUnit();
+      //   window.addEventListener("resize", setRemUnit);
+
+      window.onload = function () {
+        /*750代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;
+          100代表换算比例，这里写100是为了以后好算,
+          比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+        getRem(750, 100);
+      };
+      window.onresize = function () {
+        getRem(750, 100);
+      };
+      function getRem(pwidth, prem) {
+        var html = document.getElementsByTagName("html")[0];
+        var cliWidth =
+          document.body.clientWidth || document.documentElement.clientWidth;
+        console.log("cliWidth", cliWidth);
+        html.style.fontSize = (cliWidth / pwidth) * prem + "px";
+      }
+    </script>
+    <div id="root"></div>
+  </body>
+</html>
