@@ -70,13 +70,13 @@ module.exports = {
               },
             },
           },
-          //   {
-          //     loader: "px2rem-loader", //把px自动转成rem
-          //     options: {
-          //       remUnit: 75, //一个rem代表75px
-          //       remPrecesion: 8, //计算精度保留8位小数
-          //     },
-          //   },
+          {
+            loader: "px2rem-loader", //把px自动转成rem
+            options: {
+              remUnit: 75, //一个rem代表75px
+              remPrecesion: 8, //计算精度保留8位小数
+            },
+          },
         ],
       },
       {
@@ -95,13 +95,13 @@ module.exports = {
               },
             },
           },
-          //   {
-          //     loader: "px2rem-loader",
-          //     options: {
-          //       remUnit: 75,
-          //       remPrecesion: 8,
-          //     },
-          //   },
+          {
+            loader: "px2rem-loader",
+            options: {
+              remUnit: 75,
+              remPrecesion: 8,
+            },
+          },
           "less-loader",
         ],
       },

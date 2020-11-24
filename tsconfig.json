@@ -8,12 +8,14 @@
       "jsx": "react",
       "esModuleInterop":true,
       "moduleResolution":"node",
+      "allowSyntheticDefaultImports": true,
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "experimentalDecorators": true,
     },
-    "baseUrl": ".",
-    "paths": {
-      "@/**/*": [
-        "./src/**/*"
-      ]
+    "baseUrl": ".",  // 解析非相对模块的基地址，默认是当前目录
+    "paths": {       // 路径映射，相对于baseUrl
+      "@/*": ["./src/*" ] //把@映射为src目录
     },
     "include": [
       "./src/**/*"
